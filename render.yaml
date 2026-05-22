@@ -1,0 +1,11 @@
+runtime-image: python:3.10
+build-command: cd backend && pip install -r requirements.txt
+start-command: cd backend && uvicorn main:app --host 0.0.0.0 --port 8000
+
+envs:
+  - key: ALPACA_API_KEY
+    value: ""
+  - key: ALPACA_SECRET_KEY
+    value: ""
+  - key: ALPACA_BASE_URL
+    value: https://paper-api.alpaca.markets
